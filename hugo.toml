@@ -1,0 +1,18 @@
+baseURL = 'http://localhost:1313'  # Will change at later state
+languageCode = 'en-us'
+title = "Plamen's DevOps Journey"
+theme = 'ananke'
+
+[params]
+  subtitle = "Learning DevOps"
+  description = "My journey building a home lab with K3s, Docker, and CI/CD"
+  author = "Plamen Florov"
+  
+  # Enable syntax highlighting for code blocks
+  [markup]
+    [markup.goldmark]
+      [markup.goldmark.renderer]
+        unsafe = true
+    [markup.highlight]
+      style = "github"
+      lineNos = true

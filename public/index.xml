@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Plamen&#39;s DevOps Journey</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Plamen&#39;s DevOps Journey</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Jan 2025 19:00:00 +0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My K3s Home Lab Journey</title>
+      <link>http://localhost:1313/posts/my-k3s-journey/</link>
+      <pubDate>Mon, 13 Jan 2025 19:00:00 +0300</pubDate>
+      <guid>http://localhost:1313/posts/my-k3s-journey/</guid>
+      <description>&lt;h1 id=&#34;welcome-to-my-devops-journey-&#34;&gt;Welcome to My DevOps Journey! 🚀&lt;/h1&gt;&#xA;&lt;p&gt;This is my first post deployed via CI/CD pipeline to my K3s cluster.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-ive-built-so-far&#34;&gt;What I&amp;rsquo;ve Built So Far:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;2-node K3s cluster on old laptops (Toshiba + Acer)&lt;/li&gt;&#xA;&lt;li&gt;Monitoring with Prometheus + Grafana&lt;/li&gt;&#xA;&lt;li&gt;Networking with Tailscale + Cloudflare tunnels&lt;/li&gt;&#xA;&lt;li&gt;Glance dashboard for service overview&lt;/li&gt;&#xA;&lt;li&gt;Basic scripts for automating deployments and provisioning&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;next-steps&#34;&gt;Next Steps:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;✅ Master CI/CD pipelines (currently working on this!)&lt;/li&gt;&#xA;&lt;li&gt;Add more applications to the cluster&lt;/li&gt;&#xA;&lt;li&gt;Document everything&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;the-setup&#34;&gt;The Setup:&lt;/h2&gt;&#xA;&lt;p&gt;This post was automatically:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
