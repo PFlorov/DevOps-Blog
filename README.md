@@ -20,9 +20,13 @@
 ## 📁 Structure
 
 ├── content/posts/ # Blog posts
+
 ├── .github/workflows/ # CI/CD pipeline
+
 ├── Dockerfile # Container build
+
 ├── nginx.conf # Web server config
+
 └── hugo.toml # Hugo config
 
 ## 🎯 Learning Goals
