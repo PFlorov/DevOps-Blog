@@ -9,6 +9,10 @@ jobs:
   build-push-image:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: read
+      packages: write
+
     env:
       REGISTRY: ghcr.io
 
