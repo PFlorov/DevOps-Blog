@@ -64,7 +64,7 @@ jobs:
         run: |
           cd k3s-homelab-repo
 
-          ${{ steps.yq.outputs.path }} e '.spec.template.spec.containers[0].image = "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}"' -i clusters/homelab/apps/blog/blog-deployment.yaml
+          yq -i '.spec.template.spec.containers[0].image = "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}"' clusters/homelab/apps/blog/blog-deployment.yaml
 
           cat cluster/homelab/apps/blog/blog-deployment.yaml
 
