@@ -2,6 +2,7 @@
 title: "Conquering CI/CD: My GitOps Pipeline is Live!"
 date: 2025-10-21T14:00:00+03:00 # Adjust date/time if needed
 draft: false
+slug: "conquering-ci-cd"
 tags: ["DevOps", "CI/CD", "GitOps", "FluxCD", "K3s", "GitHub Actions"]
 ---
 

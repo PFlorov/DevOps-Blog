@@ -2,6 +2,7 @@
 title: "First Automated Blog Deployment: Pushing to K3s"
 date: 2025-10-17T10:00:00+03:00
 draft: false
+slug: "first-automated-blog-deploy"
 tags: ["DevOps", "CI/CD", "GitHub Actions", "K3s", "Docker", "Cloudflare"]
 ---
 
