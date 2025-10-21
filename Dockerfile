@@ -13,7 +13,7 @@ RUN echo "----------------------------"
 ENV HUGO_ENVIRONMENT="production"
 ENV HUGO_BASEURL="https://blog.k3s-homelab.org"
 
-RUN hugo --verbose --buildDrafts --cleanDestinationDir
+RUN hugo --buildDrafts --cleanDestinationDir
 
 RUN ls -lR /app/public
 RUN echo "--- Content of /app/public/index.html ---"
