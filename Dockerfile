@@ -10,8 +10,11 @@ RUN echo "--- Content of hugo.toml ---"
 RUN cat /app/hugo.toml || echo "hugo.toml not found or empty"
 RUN echo "----------------------------"
 
-ENV HUGO_ENVIRONMENT="production"
-ENV HUGO_BASEURL="https://blog.k3s-homelab.org"
+RUN hugo \
+    --environment "production" \
+    --baseURL "https://blog.k3s-homelab.org" \
+    --buildDrafts \
+    --cleanDestinationDir
 
 RUN hugo --buildDrafts --cleanDestinationDir
 
