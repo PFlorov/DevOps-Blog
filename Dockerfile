@@ -8,6 +8,10 @@ COPY . /app
 
 RUN hugo --buildDrafts --cleanDestinationDir
 
+RUN ls -lR /app/public
+RUN echo "--- Content of /app/public/index.html ---"
+RUN cat /app/public/index.html || echo "index.html not found in public/"
+
 FROM nginx:alpine
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
