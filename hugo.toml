@@ -1,4 +1,4 @@
-baseURL = 'https://blog.k3s-homelab.org'  # Will change at later state
+baseURL = 'https://blog.k3s-homelab.org/'
 languageCode = 'en-us'
 title = "Plamen's DevOps Journey"
 theme = 'ananke'
