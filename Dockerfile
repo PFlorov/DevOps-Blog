@@ -1,4 +1,4 @@
-FROM hugomods/hugo:latest AS builder
+FROM klakegg/hugo:extended-latest AS builder
 
 LABEL env=production
 
