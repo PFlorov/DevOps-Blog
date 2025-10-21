@@ -57,7 +57,7 @@ jobs:
           path: k3s-homelab-repo
 
       - name: Install the right yq version
-        uses: mikeferah/yq@v4.35.2
+        uses: mikefarah/yq@v4.35.2
         id: yq
 
       - name: Update image tag in k3s-homelab deployment
