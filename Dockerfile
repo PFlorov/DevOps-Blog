@@ -6,7 +6,7 @@ WORKDIR /app
 
 COPY . /app
 
-RUN hugo
+RUN hugo --buildDrafts --cleanDestinationDir
 
 FROM nginx:alpine
 
