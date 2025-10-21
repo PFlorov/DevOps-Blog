@@ -18,7 +18,7 @@ RUN echo "--- Content of /app/content/posts/conquering-ci-cd-homelab.md ---"
 RUN cat /app/content/posts/conquering-ci-cd-homelab.md || echo "Conquering CI/CD post MD not found"
 RUN echo "----------------------------------------------"
 
-RUN hugo --buildDrafts --cleanDestinationDir
+RUN hugo --buildDrafts --buildFuture --cleanDestinationDir
 
 RUN ls -lR /app/public
 RUN echo "--- Content of /app/public/index.html ---"
