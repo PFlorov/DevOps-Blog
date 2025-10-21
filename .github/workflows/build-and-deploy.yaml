@@ -56,12 +56,15 @@ jobs:
           token: ${{ secrets.FLUX_PAT_K3S_HOMELAB }}
           path: k3s-homelab-repo
 
+      - name: Install the right yq version
+        uses: mikeferah/yq@v4.35.2
+        id: yq
+
       - name: Update image tag in k3s-homelab deployment
         run: |
           cd k3s-homelab-repo
-          sudo apt-get update && sudo apt-get install -y yq
 
-          yq e '.spec.template.spec.containers[0].image = "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}"' -i clusters/homelab/apps/blog/blog-deployment.yaml
+          ${{ steps.yq.outputs.path }} e '.spec.template.spec.containers[0].image = "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}"' -i clusters/homelab/apps/blog/blog-deployment.yaml
 
           cat cluster/homelab/apps/blog/blog-deployment.yaml
 
