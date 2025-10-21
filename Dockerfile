@@ -18,12 +18,6 @@ RUN echo "--- Content of /app/content/posts/conquering-ci-cd-homelab.md ---"
 RUN cat /app/content/posts/conquering-ci-cd-homelab.md || echo "Conquering CI/CD post MD not found"
 RUN echo "----------------------------------------------"
 
-RUN hugo \
-    --environment "production" \
-    --baseURL "https://blog.k3s-homelab.org" \
-    --buildDrafts \
-    --cleanDestinationDir
-
 RUN hugo --buildDrafts --cleanDestinationDir
 
 RUN ls -lR /app/public
