@@ -6,35 +6,7 @@ WORKDIR /app
 
 COPY . /app
 
-RUN echo "--- Content of hugo.toml ---"
-RUN cat /app/hugo.toml || echo "hugo.toml not found or empty"
-RUN echo "----------------------------"
-
-RUN echo "--- Checking for theme ---"
-RUN ls -la /app/themes/ || echo "No themes directory found"
-RUN ls -la /app/themes/ananke/ || echo "No ananke theme found"
-
-RUN echo "--- Listing source content/posts directory ---"
-RUN ls -lR /app/content/posts
-RUN echo "--- Content of /app/content/posts/first-automated-blog-deploy.md ---"
-RUN cat /app/content/posts/first-automated-blog-deploy.md || echo "First post MD not found"
-RUN echo "--- Content of /app/content/posts/conquering-ci-cd-homelab.md ---"
-RUN cat /app/content/posts/conquering-ci-cd-homelab.md || echo "Conquering CI/CD post MD not found"
-RUN echo "----------------------------------------------"
-
 RUN hugo --buildDrafts --buildFuture --cleanDestinationDir
-
-RUN echo "--- All HTML files generated ---"
-RUN find /app/public -name "*.html" -type f | head -20
-RUN echo "--- Checking specific post directories ---"
-RUN ls -la /app/public/posts/first-automated-blog-deploy/ || echo "first-automated-blog-deploy directory not found"
-RUN ls -la /app/public/posts/conquering-ci-cd-homelab/ || echo "conquering-ci-cd-homelab directory not found"
-RUN echo "--- All post-related directories ---"
-RUN find /app/public -path "*/posts/*" -type d
-
-RUN ls -lR /app/public
-RUN echo "--- Content of /app/public/index.html ---"
-RUN cat /app/public/index.html || echo "index.html not found in public/"
 
 FROM nginx:alpine
 
