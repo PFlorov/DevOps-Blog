@@ -53,7 +53,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: PFlorov/k3s-homelab
-          token: {{ secrets.FLUX_PAT_K3S_HOMELAB }}
+          token: ${{ secrets.FLUX_PAT_K3S_HOMELAB }}
           path: k3s-homelab-repo
 
       - name: Update image tag in k3s-homelab deployment
